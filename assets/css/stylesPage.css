@@ -1,0 +1,73 @@
+:root {
+    --primary-dark: #142159;
+    --primary-default: #425DC7;
+    --neutal-hight: #FFFFFF;
+}
+
+body {
+    background-color: var(--primary-dark);
+}
+
+.auth-page__container {
+    background-color: var(--neutal-hight);
+}
+
+.auth-page__content {
+
+}
+
+.auth-page__form {
+
+}
+
+.auth-page__title {
+
+}
+
+.auth-page__description {
+
+}
+
+.auth-page__login {
+
+}
+
+.auth-page__email {
+
+}
+
+.auth-page__input-email {
+
+}
+
+.auth-page__password {
+
+}
+
+.auth-page__input-password {
+
+}
+
+.auth-page__input-icon {
+
+}
+
+.auth-page__password-settings {
+
+}
+
+.auth-page__keep-conect {
+
+}
+
+.auth-page__input-keep-conect {
+
+}
+
+.auth-page__lost-password {
+
+}
+
+.auth-page__submit {
+    
+}
