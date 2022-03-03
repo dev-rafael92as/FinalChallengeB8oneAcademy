@@ -30,7 +30,7 @@
 .main-content {
     width: min(100%, 1196px);
     height: 1662px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     position: sticky;
     top: 64px;
     left: 0px;
@@ -124,7 +124,7 @@
     left: 0;
     width: min(100%, 244px);
     height: calc(100vh - 84px);
-    border-right: 1px solid black;
+    /* border-right: 1px solid black; */
 }
 
 /* Estilização sidebar-menu */
@@ -246,4 +246,179 @@
     border: 2px solid #ffffff;
     padding: 8px 16px;
     border-radius: 8px;
+}
+
+/* Estilização calendar */
+
+.calendar {
+    margin-top: 24px;
+    width: min(100%, 586px);
+}
+
+.calendar__title {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--neutral-dark);
+    margin-bottom: 16px;
+}
+
+.calendar__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 6px;
+    margin-bottom: 16px;
+}
+
+.calendar__item:nth-last-child( -n + 1 ) .calendar__button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: nowrap;
+}
+
+.calendar__button {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--neutral-dark);
+    transition: all .1s ease-in-out;
+    height: 32px;
+}
+
+.calendar__button:hover {
+    padding: 6px 14px;
+    border-color: var(--primary-default);
+    color: var(--primary-default);
+    border: 2px solid #425DC7;
+}
+
+.calendar__button--active, 
+.calendar__button--active:hover {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: var(--primary-default);
+    color: var(--neutal-hight);
+}
+
+.calendar__button-icon  {
+    stroke: var(--primary-default);
+    /* fill: var(--primary-default); */
+}
+
+.calendar__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--neutral-medium);
+    letter-spacing: -0.005em;
+}
+
+.calendar__text-date {
+    font-weight: 500;
+    color: var(--primary-default);
+}
+
+/* Estilização general-report */
+
+.general-report {
+    padding: 24px;
+    width: min(100%, 1132px);
+}
+
+.general-report__title-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.genaral-report__title {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--neutral-dark);
+}
+
+.general-report__button-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.general-report__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.005em;
+    padding-bottom: 14px;
+    color: var(--neutral-medium);
+    transition: all .2s ease-in-out;
+}
+
+.general-report__button:hover {
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--neutral-dark);
+}
+
+.general-report__button--active, 
+.general-report__button--active:hover {
+    padding-bottom: 12px;
+    color: var(--primary-default);
+    border-bottom: 2px solid var(--primary-default);  
+}
+
+/* Estilização data-card */
+
+.general-report__data-card-list {
+    width: min(100%, 1084px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.general-report__data-card-item {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+    width: min(100%, 350px);
+    padding: 20px;
+}
+
+.general-report__data-card-values {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.general-report__data-card-title {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--neutral-medium);
+    letter-spacing: -0.005em;
+}
+
+.general-report__data-card-value {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+}
+
+/* Estilizalção Graphic */
+
+.graphic {
+    width: min(100%, 1084px);
+    height: 228px;
+    background-color: var(--neutral-low);
 }
