@@ -421,4 +421,115 @@
     width: min(100%, 1084px);
     height: 228px;
     background-color: var(--neutral-low);
+    margin-bottom: 32px;
+}
+
+/* Estilização insights */
+
+.insights {
+    padding: 24px;
+    width: min(100%, 1132px);
+}
+
+/* Estilização sale-products */
+
+.sale-products__container-title {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    margin-bottom: 36px;
+}
+
+.sale-products__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.sale-products__title {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--neutral-dark);
+}
+
+.sale-products__description {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--neutral-medium);
+    margin-bottom: 36px;
+}
+
+/* Estilização sale-products__table */
+
+.sale-products__table {
+    width: min(100%, 1084px);
+}
+
+.sale-products__table-tr:nth-child(1) {
+    height: 2.5rem;
+    margin-bottom: 4px;
+}
+
+.sale-products__table-tr:nth-child(n+2):nth-child(-n+11) {
+    height: 3.5rem;
+    margin-bottom: 4px;
+}
+
+.sale-products__table-th {
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--neutral-medium);
+}
+
+.sale-products__table-th:nth-child(1) {
+    width: 43.75rem;
+}
+
+.sale-products__table-th:nth-child(2) {
+    width: 9rem;
+}
+
+.sale-products__table-th:nth-child(3) {
+    width: 7rem;
+}
+
+.sale-products__table-th:nth-child(4) {
+    width: 8rem;
+}
+
+.sale-products__table-td-container {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+}
+
+.sale-products__table-td {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--neutral-low);
+}
+
+.sale-products__table-td-num {
+    
+    padding: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--primary-default);
+}
+
+
+
+.sale-products__table-td-description {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--neutral-low);
+    width: min(100%, 540px);
 }
