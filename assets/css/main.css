@@ -487,24 +487,21 @@ body {
     border-collapse: collapse;
 }
 
+.sale-products__table-tr:nth-child(odd) {
+    background-color: var(--primary-lightest);
+}
+
 .sale-products__table-tr:nth-child(1) {
     height: 2.5rem;
     margin-bottom: 4px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: var(--neutal-hight);
 }
 
 .sale-products__table-tr:nth-child(n+2):nth-child(-n+11) {
     height: 3.5rem;
     margin-bottom: 4px;
 }
-
-.sale-products__table-tr:nth-child(even) {
-    background-color: var(--primary-lightest);
-    border-radius: 8px;
-}
-
-
-
-
 
 .sale-products__table-th {
     text-align: left;
@@ -572,33 +569,88 @@ body {
 /* Estilização sale-products-pagination */
 
 .sale-products__pagination {
-
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .sale-products__pagination--left {
-
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
 }
 
 .sale-products__pagination-text {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+}
 
+.sale-products__pagination-input {
+    position: relative;
 }
 
 .sale-products__pagination-num {
+    width: 64px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #999999;
+    color: var(--neutral-low);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    padding-left: 12px;
+}
 
+.sale-products__pagination-num-icon {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    cursor: pointer;
 }
 
 .sale-products__pagination--right {
-
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
 }
 
-.sale-products__pagination-icon {
+.sale-products__pagination-icon-div {
+    cursor: pointer;
+    padding: 4px;
+    background-color:var(--primary-lightest);
+    border-radius: 100%;
+}
 
+.sale-products__pagination-icon-div:hover {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 100%;
+    
 }
 
 .sale-products__pagination-pag {
-
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    
 }
 
-.sale-products__pagination-pag--active {
-
+.sale-products__pagination-pag--active,  
+.sale-products__pagination-pag:hover {
+    background-color: var(--primary-default);
+    color: var(--neutal-hight);
+    padding: 4px;
+    text-align: center;
+    border-radius: 100%;
 }
