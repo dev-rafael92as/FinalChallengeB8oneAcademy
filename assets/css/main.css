@@ -24,7 +24,7 @@ body {
 }
 
 .main {
-    width: min(100%, 1440px);
+    width: min(100%, 90rem);
     margin: auto;
     position: sticky;
     top: 64px;
@@ -34,7 +34,6 @@ body {
 
 .main-content {
     width: min(100%, 1196px);
-    height: 1662px;
     /* background-color: #ccc; */
     position: sticky;
     top: 64px;
@@ -45,17 +44,16 @@ body {
 /* Estilização header */
 
 .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     width: min(100%, 1440px);
     margin: auto;
     background-color: var(--primary-dark);
     display: flex;
     justify-content: space-between;
     height: 64px;
-    height: calc(64px- 100%);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 /* Estilização header-logo */
@@ -118,8 +116,123 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    color:var(--neutal-hight)
+    color:var(--neutal-hight);
+    position: relative;
 }
+
+.header__notification-help {
+    position: relative;
+}
+
+/* Estilização Notification help */
+
+.header__notification-help-container {
+    position: absolute;
+    right: -90px;
+    width: 200px;
+    height: 189px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__notification-help-icon {
+    position: absolute;
+    left: 90px;
+    transform:translateY(-50%)
+}
+
+.header__notification-help-ch {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    margin: 32px 0 24px 24px;
+}
+
+.header__notification-help-tutorials {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    margin-left: 24px;
+
+}
+
+.header__notification-help-chat {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--primary-default);
+    margin: 20px 0 0 24px;
+    border-top: 1px solid var(--primary-lightest);
+    padding-top: 20px;
+}
+
+/* Estilização Notification Perfil */
+
+.header__notification-perfil {
+    position: absolute;
+    top: 58px;
+    right: 30px;
+    width: min(100%, 224px);
+    height: 173px;
+    background-color: var(--neutal-hight);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+} 
+
+.header__notification-perfil-vector {
+    position: absolute;
+    left: 95px;
+    top: -8px;
+}
+
+.header__notification-perfil-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    margin: 24px 24px 16px 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--primary-lightest);
+}
+
+.header__notification-perfil-name {
+    color: var(--primary-default);
+}
+
+.header__notification-perfil-my-account {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    margin-bottom: 16px;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+.header__notification-perfil-logout {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    display: block;
+    margin: 16px 24px;
+}
+
 
 /* Estilização sidebar */
 
@@ -131,6 +244,42 @@ body {
     height: calc(100vh - 64px);
     background-color: var(--neutal-hight);
     /* border-right: 1px solid black; */
+}
+
+/* Estilização sidebar-dropdown */
+
+.sidebar-dropdown__sale {
+    display: none;
+}
+
+.sidebar-dropdown__finance {
+    display: none;
+}
+
+.sidebar-dropdown__config {
+    display: none;
+}
+
+.sidebar-dropdown__tool {
+    display: none;
+}
+
+.sidebar-dropdown__sale-link {
+    display: block;
+    margin-left: 22px;
+    padding: 12px 0 12px 28px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-low);
+    border-left: 2px solid #D5D5D5;
+    transition: all .3s ease-in-out;
+}
+
+.sidebar-dropdown__sale-link:hover {
+    color:var(--primary-default);
+    border-left: 2px solid var(--primary-default);
 }
 
 /* Estilização sidebar-menu */
@@ -289,6 +438,7 @@ body {
 
 .calendar__button {
     display: block;
+    width: max-content;
     padding: 8px 16px;
     border-radius: 8px;
     font-weight: 600;
@@ -437,6 +587,7 @@ body {
     height: 228px;
     background-color: var(--neutral-low);
     margin-bottom: 32px;
+    margin-top: 48px;
 }
 
 /* Estilização insights */
@@ -653,4 +804,98 @@ body {
     padding: 4px;
     text-align: center;
     border-radius: 100%;
+}
+
+@media screen and (max-width: 360px) {
+
+    .main-content {
+        width: 100%;
+        padding: 16px;
+    }
+
+
+    /* header */
+    .header {
+        width: min(100%, 360px);
+        height: 48px;
+    }
+
+    .header__menu {
+        padding-right: 16px;
+    }
+
+    .header__menu-perfil-name {
+        display: none;
+    }
+
+
+    .sidebar {
+        display: none;
+    }
+
+    .information-bar__itens {
+        padding: 20px;
+    }
+
+    .information-bar__cta {
+        display: none;
+    }
+
+    .information-bar__text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .information-bar__icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .calendar { 
+        margin-top: 16px;
+    }
+
+    .calendar__list {
+        overflow-x: scroll;
+    }
+
+    .calendar__text {
+        display: block;
+    }
+
+    .general-report__data-card-item {
+        width: 196px;
+        height: 64px;
+    }
+
+    .general-report__data-card-value {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .calendar__button {
+        font-size: 12px;
+        line-height: 16px;
+        width: max-content;
+    }
+
+    .calendar__list::-webkit-scrollbar,
+    .general-report__data-card-list::-webkit-scrollbar {
+        display: none;
+    }
+    
+          /* Hide scrollbar for IE, Edge and Firefox */
+        .calendar__list {
+        -ms-overflow-style: none;  /* IE and Edge /
+         scrollbar-width: none;  / Firefox */
+    }
+
+    .general-report__data-card-list {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .sale-products__table {
+        display: none;
+    }
 }
