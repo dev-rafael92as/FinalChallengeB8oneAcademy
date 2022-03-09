@@ -549,8 +549,8 @@ body {
     border-bottom: 2px solid var(--neutral-dark);
 }
 
-.general-report__button--active, 
-.general-report__button--active:hover {
+.general-report__button.active, 
+.general-report__button.active:hover {
     padding-bottom: 12px;
     color: var(--primary-default);
     border-bottom: 2px solid var(--primary-default);  
@@ -607,9 +607,6 @@ body {
 /* Estilizalção Graphic */
 
 .graphic {
-    width: min(100%, 1084px);
-    height: 228px;
-    background-color: var(--neutral-low);
     margin-bottom: 32px;
     margin-top: 48px;
 }
