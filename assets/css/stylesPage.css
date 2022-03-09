@@ -5,6 +5,7 @@
     --neutral-dark: #000000;
     --neutral-medium: #555555;
     --neutral-low: #333333;
+    --feedback-default: #F03460;
 }
 
 body {
@@ -63,8 +64,23 @@ body {
     padding: 12px 16px;
     border: 1px solid var(--neutral-medium);
     border-radius: 8px;
-    margin-bottom: 16px;
     width: min(100%, 336px);
+}
+
+.auth-page__input-auth--validation {
+    padding: 12px 16px;
+    border: 1px solid var(--feedback-default);
+    border-radius: 8px;
+    width: min(100%, 336px);
+}
+
+.auth-page__input-auth-validation {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--feedback-default);
+    margin-top: 8px;
 }
 
 .auth-page__input-auth:last-child {
@@ -94,6 +110,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 16px;
 }
 
 .auth-page__container-keep-conect {
