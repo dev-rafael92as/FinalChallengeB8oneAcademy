@@ -133,19 +133,17 @@ body {
 
 .header__notification-help-container {
     position: absolute;
-    right: -90px;
+    right: 141px;
     width: 200px;   
     height: 189px;
     background: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
 
-.header__notification-help:hover + .header__notification-help-container {
-    visibility: visible;
-    opacity: 1;
+li:hover .header__notification-help-container {
+    display: block;
 }
 
 .header__notification-help-icon {
@@ -197,9 +195,12 @@ body {
     background-color: var(--neutal-hight);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 } 
+
+li:hover .header__notification-perfil {
+    display: block;
+}
 
 .header__notification-perfil-vector {
     position: absolute;
@@ -257,21 +258,27 @@ body {
 }
 
 /* Estilização sidebar-dropdown */
-
-.sidebar-dropdown__sale {
-    display: none;
+.sidebar-dropdown__sale--visible, 
+.sidebar-dropdown__finance--visible, 
+.sidebar-dropdown__config--visible,
+.sidebar-dropdown__tool--visible {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    max-height: max-content;
+    transition: all .5s ease-in-out;
 }
 
-.sidebar-dropdown__finance {
-    display: none;
-}
 
-.sidebar-dropdown__config {
-    display: none;
-}
-
-.sidebar-dropdown__tool {
-    display: none;
+.sidebar-dropdown__sale--hide, 
+.sidebar-dropdown__finance--hide, 
+.sidebar-dropdown__config--hide,
+.sidebar-dropdown__tool--hide {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in-out;
 }
 
 .sidebar-dropdown__sale-link {
@@ -284,12 +291,26 @@ body {
     letter-spacing: -0.005em;
     color: var(--neutral-low);
     border-left: 2px solid #D5D5D5;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.iconRotate {
+    transform: rotate(180deg);
+    transition: all .5s ease-in-out;
+}
+
+.sidebar-dropdown__sale-list {
+    transition: all .5s ease-in-out;
+}
+
+.sidebar-dropdown__sale-item {
+    transition: all .5s ease-in-out;
 }
 
 .sidebar-dropdown__sale-link:hover {
     color:var(--primary-default);
     border-left: 2px solid var(--primary-default);
+    transition: all .5s ease-in-out;
 }
 
 /* Estilização sidebar-menu */
@@ -302,8 +323,24 @@ body {
 .sidebar__menu-item {
     width: min(100%, 212px);
     height: 48px;
-    padding: 16px 14px 16px 12px;
-    
+    padding: 12px 14px 16px 12px; 
+}
+
+.sidebar__menu-item:hover {
+    background-color: #E5E5E5;
+    border-radius: 8px;
+}
+
+.sidebar__menu-item:hover .sidebar__menu-name {
+    color: var(--primary-default);
+}
+
+.sidebar__menu-item:hover .sidebar__menu-drop-icon path{
+    stroke:var(--primary-default);
+}
+
+.sidebar__menu-link {
+    cursor: pointer;
 }
 
 .sidebar__menu-flex {
@@ -327,8 +364,13 @@ body {
     color: var(--neutral-low);
 }
 
+.sidebar__menu-name:hover {
+    color:var(--primary-default);
+}
+
 .sidebar__menu-drop-icon {
     color: var(--neutral-low);
+    transition: all .5s ease-in-out;
 }
 
 .sidebar__menu-name--active {
@@ -375,6 +417,11 @@ body {
     line-height: 24px;
     color: var(--neutal-hight);
     margin-bottom: 16px;
+}
+
+.sidebar__cta-button:hover {
+    background-color:var(--primary-dark);
+    transition: all .3s ease-in-out;
 }
 
 /* Estilização information-bar */
@@ -464,10 +511,11 @@ body {
     transition: all .1s ease-in-out;
     height: 32px;
     background-color: var(--neutal-hight);
+    border: 2px solid transparent;
 }
 
 .calendar__button:hover {
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-color: var(--primary-default);
     color: var(--primary-default);
     border: 2px solid #425DC7;
@@ -484,7 +532,7 @@ body {
     color: var(--neutal-hight);
 }
 
-.calendar__button-icon  {
+.calendar__button:hover .calendar__button-icon path {
     stroke: var(--primary-default);
     /* fill: var(--primary-default); */
 }
@@ -570,7 +618,7 @@ body {
     align-items: center;
     gap: 0 24px;
     width: min(100%, 350px);
-    padding: 20px;
+    padding: 12px;
     border: 2px solid #F1F2F9;
     border-radius: 12px;
 }
@@ -992,7 +1040,7 @@ body {
 
     .sidebar__menu-item {
         width: min(100%, 296px);
-        
+
     }
 
     .sale-products__table-mobile {
