@@ -253,7 +253,6 @@ async function populateProductsMobile() {
             </div>
         </div>
         `
-    
     })
 
     const tableHtmlMobile = productsTableMobile.join(" ");
