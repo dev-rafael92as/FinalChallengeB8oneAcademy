@@ -1114,3 +1114,16 @@ li:hover .header__notification-perfil {
         gap: 16px;
     }
 }
+
+/* Chart tabs */
+#Vendas {
+    display: block;
+}
+
+#Pedidos {
+    display: none;
+}
+
+#Revendedores {
+    display: none;
+}

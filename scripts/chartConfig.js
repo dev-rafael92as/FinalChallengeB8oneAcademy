@@ -129,7 +129,7 @@ function renderChartRevendedores() {
       label: "Comissão a pagar",
       backgroundColor: colors.red,
       borderColor: colors.red,
-      data: [0, 10, 5, 16, 20, 30, 45],
+      data: [0, 15, 0, 0, 20, 30, 45],
     }
   ];
 
