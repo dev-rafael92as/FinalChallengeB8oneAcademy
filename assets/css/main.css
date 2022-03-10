@@ -8,6 +8,7 @@
     --primary-lightest: #F1F2F9;
     --feedback-helper: #F03460;
     --background-bg: #E5E5E5;
+    --neutral-low-light: #999999;
 }
 
 body {
@@ -657,6 +658,128 @@ li:hover .header__notification-perfil {
 .graphic {
     margin-bottom: 32px;
     margin-top: 48px;
+}
+
+.tab-resellers__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.tab-resellers__button-show {
+    border: 1px solid #999999;
+    border-radius: 8px;
+    padding: 10px 16px 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 24px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.005em;
+    color:var(--neutral-low-light);
+}
+
+
+.tab-resellers__card-sellers {
+    border: 2px solid var(--primary-lightest);
+    padding: 24px;
+    border-radius: 8px;
+    width: min(100%, 340px);
+}
+
+.tab-resellers__container-title {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    margin-bottom: 24px;
+}
+
+.tab-resellers__icon-title {
+    width: 16px;
+}
+
+.tab-rellers__card-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--neutral-dark);
+}
+
+
+.tab-resellers__ranking-list {
+    border-bottom: 2px solid #F1F2F9;
+    padding-bottom: 24px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary-default);
+}
+
+.tab-resellers__ranking-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.tab-resellers__ranking-position {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color:var(--neutral-dark);
+    margin-right: 5px;
+}
+
+
+.tab-resellers__ranking-infos {
+    display: flex;
+    flex-direction: column;  
+}
+
+.tab-resellers__ranking-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--neutral-dark);
+}
+
+.tab-resellers__ranking-demand {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    color: var(--neutral-medium);
+}
+
+.tab-resellers__ranking-percent-icon {
+    padding-top: 5px; 
+}
+
+.tab-resellers__ranking-percent-num {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    color: #158F2E;
+    padding-left: 60px;
+}
+
+.tab-resellers__ranking-button-container {
+    display: flex;
+    justify-content: end;
+}
+
+.tab-resellers__ranking-see-all {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--primary-default);
+    border-radius: 8px;
+    border: 2px solid #425DC7;
+    padding: 8px 16px;
+    margin-top: 24px;
 }
 
 /* Estilização insights */
