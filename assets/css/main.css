@@ -101,6 +101,10 @@ body {
     position: relative;
 }
 
+#header__notification {
+    position: relative;
+}
+
 .header__menu-notification--alert {
     width: 6px;
     height: 6px;
@@ -147,6 +151,10 @@ li:hover .header__notification-help-container {
     display: block;
 }
 
+li:hover .header__notification-geral {
+    display: block;
+}
+
 .header__notification-help-icon {
     position: absolute;
     left: 90px;
@@ -183,6 +191,14 @@ li:hover .header__notification-help-container {
     margin: 20px 0 0 24px;
     border-top: 1px solid var(--primary-lightest);
     padding-top: 20px;
+}
+
+/* Estilização Notification Geral */
+
+.header__notification-geral {
+    position: absolute;
+    right: -175px;
+    display: none;
 }
 
 /* Estilização Notification Perfil */
@@ -660,10 +676,17 @@ li:hover .header__notification-perfil {
     margin-top: 48px;
 }
 
+.graphic-3 {
+    margin-bottom: 32px;
+    margin-top: 48px;
+    max-width: min(100%, 640px);
+    position: relative;
+}
+
 .tab-resellers__container {
-    display: flex;
+    /* display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around; */
     margin-top: 16px;
 }
 
@@ -684,10 +707,14 @@ li:hover .header__notification-perfil {
 
 
 .tab-resellers__card-sellers {
+    position: absolute;
+    top: 270px;
+    right: 80px;
     border: 2px solid var(--primary-lightest);
     padding: 24px;
     border-radius: 8px;
     width: min(100%, 340px);
+    background-color: var(--neutal-hight);
 }
 
 .tab-resellers__container-title {
@@ -833,7 +860,7 @@ li:hover .header__notification-perfil {
     border-collapse: collapse;
 }
 
-.sale-products__table-tr:nth-child(odd) {
+.sale-products__table-tr:nth-child(even) {
     background-color: var(--primary-lightest);
 }
 

@@ -51,7 +51,7 @@
                             </a>
                         </div>
                     </li>
-                    <li>
+                    <li id="header__notification">
                         <div class="header__menu-notification">
                             <a href="#" class="header__menu-notification-link">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,6 +61,7 @@
                                 <span class="header__menu-notification--alert"></span>
                             </a>
                         </div>
+                        <img src="./assets/images/notification.png" alt="" class="header__notification-geral">
                     </li>
                     <li>
                         <div class="header__menu-perfil">
@@ -492,7 +493,7 @@
                         </li>
                     </ul>
                     <div class="graphic">
-                        <canvas id="chart-vendas"></canvas>
+                        <canvas id="chart-vendas" width="1084" height="196"></canvas>
                     </div>
                 </div>
                 <!-- FIM Tab Vendas -->
@@ -500,7 +501,7 @@
                 <!-- Tab Pedidos -->
                 <div id="Pedidos" class="tabcontent">
                     <div class="graphic">
-                        <canvas id="chart-pedidos"></canvas>
+                        <canvas id="chart-pedidos" width="1084" height="267"></canvas>
                     </div>
                 </div>
                 <!-- FIM Tab Pedidos -->
@@ -508,12 +509,17 @@
                 <!-- Tab Revendedores -->
                 <div id="Revendedores" class="tabcontent">
                     <div class="tab-resellers__container">
-                        <button class="tab-resellers__button-show">
-                            Mostrar todos os revendedores
-                            <svg class="tab-resellers__button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.50024 9.75L12.0002 14.25L16.5002 9.75" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>    
-                        </button>
+                        <div class="tab-resellers__container--left">
+                            <button class="tab-resellers__button-show">
+                                Mostrar todos os revendedores
+                                <svg class="tab-resellers__button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.50024 9.75L12.0002 14.25L16.5002 9.75" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>    
+                            </button>
+                            <div class="graphic-3">
+                                <canvas id="chart-revendedores" max-width="680px" max-height="236px"></canvas>
+                            </div>
+                        </div>
                         <div class="tab-resellers__card-sellers">
                             <div class="tab-resellers__container-title">
                                 <img class="tab-resellers__icon-title" src="./assets/images/trophy-icon.png" alt="Icone Troféu" srcset="">
@@ -631,9 +637,6 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="graphic">
-                        <canvas id="chart-revendedores"></canvas>
                     </div>
                 </div>
                 <!-- FIM Tab Revendedores -->
