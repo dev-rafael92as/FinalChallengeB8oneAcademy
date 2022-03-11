@@ -51,25 +51,25 @@ async function populateProductsMobile() {
     const tableGroupListMobile = document.querySelector(".sale-products__table-mobile");
     const productsTableMobile = arrayDataProductsMobile.map((item, index) => {
         return `
-        <div class="sale-products__table-mobile-row">
-            <div class="sale-products__table-mobile-row-up">
-                <img referrerpolicy="no-referrer" src="${item.image}" alt="${item.name}" class="sale-products__table-mobile-img">
-                <span class="sale-products__tabel-mobile-description">
-                    ${item.name}
-                </span>
+            <div class="sale-products__table-mobile-row">
+                <div class="sale-products__table-mobile-row-up">
+                    <img referrerpolicy="no-referrer" src="${item.image}" alt="${item.name}" class="sale-products__table-mobile-img">
+                    <span class="sale-products__tabel-mobile-description">
+                        ${item.name}
+                    </span>
+                </div>
+                <div class="sale-products__table-mobile-row-down">
+                    <span class="sale-products__table-mobile-num">
+                        ${index + 1}
+                    </span>
+                    <span class="sale-products__table-mobile-code">
+                        ${'#' + item.orderId}
+                    </span>
+                    <span class="sale-products__table-mobile-price">
+                            ${(item.price/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
+                    </span>
+                </div>
             </div>
-            <div class="sale-products__table-mobile-row-down">
-                <span class="sale-products__table-mobile-num">
-                    ${index + 1}
-                </span>
-                <span class="sale-products__table-mobile-code">
-                    ${'#' + item.orderId}
-                </span>
-                <span class="sale-products__table-mobile-price">
-                        ${(item.price/100).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
-                </span>
-            </div>
-        </div>
         `
     })
 

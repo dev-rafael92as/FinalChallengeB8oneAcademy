@@ -34,7 +34,7 @@ body {
 }
 
 .main-content {
-    width: min(100%, 1196px);
+    width: min(100%, 74.75rem);
     /* background-color: #ccc; */
     position: sticky;
     top: 64px;
@@ -87,6 +87,10 @@ body {
 /* Estilização header-menu*/
 
 .header__menu-hamburguer-mobile {
+    display: none;
+}
+
+.header__menu-hamburguer-mobile2 {
     display: none;
 }
 
@@ -275,10 +279,10 @@ li:hover .header__notification-perfil {
 }
 
 /* Estilização sidebar-dropdown */
-.sidebar-dropdown__sale--visible, 
-.sidebar-dropdown__finance--visible, 
-.sidebar-dropdown__config--visible,
-.sidebar-dropdown__tool--visible {
+.dropdown-menu-item-Pravender--visible, 
+.dropdown-menu-item-Financeiro--visible, 
+.dropdown-menu-item-Configurações--visible,
+.dropdown-menu-item-Ferramentas--visible {
     opacity: 1;
     visibility: visible;
     overflow: visible;
@@ -287,10 +291,10 @@ li:hover .header__notification-perfil {
 }
 
 
-.sidebar-dropdown__sale--hide, 
-.sidebar-dropdown__finance--hide, 
-.sidebar-dropdown__config--hide,
-.sidebar-dropdown__tool--hide {
+.dropdown-menu-item-Pravender--hide, 
+.dropdown-menu-item-Financeiro--hide, 
+.dropdown-menu-item-Configurações--hide,
+.dropdown-menu-item-Ferramentas--hide {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
@@ -379,6 +383,7 @@ li:hover .header__notification-perfil {
     line-height: 20px;
     letter-spacing: -0.005em;
     color: var(--neutral-low);
+    width: max-content;
 }
 
 .sidebar__menu-name:hover {
@@ -538,6 +543,10 @@ li:hover .header__notification-perfil {
     border: 2px solid #425DC7;
 }
 
+.calendar__button--active .calendar__button-icon path {
+    stroke:var(--neutal-hight);
+}
+
 .calendar__button--active, 
 .calendar__button--active:hover {
     padding: 8px 16px;
@@ -551,7 +560,10 @@ li:hover .header__notification-perfil {
 
 .calendar__button:hover .calendar__button-icon path {
     stroke: var(--primary-default);
-    /* fill: var(--primary-default); */
+}
+
+.calendar__button--active:hover .calendar__button-icon path {
+    stroke: var(--neutal-hight);
 }
 
 .calendar__text {
@@ -703,8 +715,18 @@ li:hover .header__notification-perfil {
     line-height: 20px;
     letter-spacing: -0.005em;
     color:var(--neutral-low-light);
+    transition: all .3s ease-in-out;
 }
 
+.tab-resellers__button-show:hover {
+    border: 3px solid var(--primary-default);
+    padding: 8px 14px;
+    color: var(--primary-default);
+}
+
+.tab-resellers__button-show:hover .tab-resellers__button-icon path {
+    stroke: var(--primary-default);
+}
 
 .tab-resellers__card-sellers {
     position: absolute;
@@ -806,6 +828,12 @@ li:hover .header__notification-perfil {
     border: 2px solid #425DC7;
     padding: 8px 16px;
     margin-top: 24px;
+    transition: all .3s ease-in-out;
+}
+
+.tab-resellers__ranking-see-all:hover {
+    background-color: var(--primary-default);
+    color: var(--neutal-hight);
 }
 
 /* Estilização insights */
@@ -975,6 +1003,7 @@ li:hover .header__notification-perfil {
     line-height: 16px;
     letter-spacing: -0.005em;
     padding-left: 12px;
+    transition: all .3s ease-in-out;
 }
 
 .sale-products__pagination-num-icon {
@@ -982,6 +1011,18 @@ li:hover .header__notification-perfil {
     left: 50%;
     top: 15%;
     cursor: pointer;
+}
+
+.sale-products__pagination-num-icon:hover .sale-products__pagination-num {
+    border-color: var(--primary-default);
+}
+
+.sale-products__pagination-num:hover {
+    border-color: var(--primary-default);
+}
+
+.sale-products__pagination-num:hover + .sale-products__pagination-num-icon path {
+    stroke: var(--primary-default);
 }
 
 .sale-products__pagination--right {
@@ -1028,241 +1069,6 @@ li:hover .header__notification-perfil {
     border-radius: 100%;
 }
 
-@media screen and (max-width: 1000px) { 
-    .information-bar__cta {
-        display: none;
-    }
-
-    .calendar__list {
-        overflow-x: scroll;
-    }
-
-    .general-report__data-card-list {
-        width: 100%;
-        overflow-x: scroll;
-    }
-
-}
-
-@media screen and (max-width: 360px) {
-
-    .main-content {
-        width: 100%;
-        padding: 16px;
-    }
-
-
-    /* header */
-    .header {
-        width: min(100%, 360px);
-        height: 48px;
-    }
-
-    .header__menu {
-        padding-right: 16px;
-    }
-
-    .header__menu-hamburguer-mobile {
-        display: block;
-    }
-
-    .header__menu-hamburguer-mobile-icon {
-        border-top: 1.5px solid #FFFFFF;
-        width: 12px;
-        align-content: center;
-        display: block;
-        margin-left: 19px;
-        cursor: pointer;
-    }
-
-    .header__menu-hamburguer-mobile-icon::after { 
-        content: '';
-        width: 12px;
-        height: 1.5px;
-        display: block;
-        margin-top: 6px;
-        background-color: var(--neutal-hight);
-    }
-
-    .header__menu-hamburguer-mobile-icon::before { 
-        content: '';
-        width: 18px;
-        height: 1.5px;
-        display: block;
-        margin-top: 6px;
-        background-color: var(--neutal-hight);
-    }
-
-    .header__menu-perfil-name {
-        display: none;
-    }
-
-
-    .sidebar {
-        display: none;
-        position: absolute;
-        top: 0px;
-        left: 0;
-        height: 100%;
-        z-index: 1001;
-    }
-
-    .information-bar__itens {
-        padding: 20px;
-    }
-
-    .information-bar__cta {
-        display: none;
-    }
-
-    .information-bar__text {
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    .information-bar__icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .calendar { 
-        margin-top: 16px;
-    }
-
-    .calendar__list {
-        overflow-x: scroll;
-    }
-
-    .calendar__text {
-        display: block;
-    }
-
-    .general-report__data-card-item {
-        width: 196px;
-        height: 64px;
-    }
-
-    .general-report__data-card-value {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    .calendar__button {
-        font-size: 12px;
-        line-height: 16px;
-        width: max-content;
-    }
-
-    .calendar__list::-webkit-scrollbar,
-    .general-report__data-card-list::-webkit-scrollbar {
-        display: none;
-    }
-    
-          /* Hide scrollbar for IE, Edge and Firefox */
-        .calendar__list {
-        -ms-overflow-style: none;  /* IE and Edge /
-         scrollbar-width: none;  / Firefox */
-    }
-
-    .general-report__data-card-list {
-        width: 100%;
-        overflow-x: scroll;
-    }
-    
-    .general-report__data-card-item {
-        padding: 8px;
-    }
-
-    .general-report__data-card-title {
-        width: max-content;
-    }
-
-    .general-report__data-card-value {
-        width: max-content;
-    }
-
-    .sale-products__table {
-        display: none;
-    }
-
-    /* Estilizando tabela mobile */
-
-    .sidebar__menu-item {
-        width: min(100%, 296px);
-
-    }
-
-    .sale-products__table-mobile {
-        display:block
-    }
-
-    .sale-products__table-mobile-row--pair {
-        background-color:var(--primary-lightest);
-    }
-
-    .sale-products__table-mobile-row {
-        margin-bottom: 8px;
-        border-radius: 8px;
-        padding: 8px;
-    }
-
-    .sale-products__table-mobile-row-up {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .sale-products__table-mobile-img {
-        width: 40px;
-        text-align: center;
-    }
-
-    .sale-products__tabel-mobile-description {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        color: var(--neutral-low);
-    }
-
-    .sale-products__table-mobile-row-down {
-        display: flex;
-        align-items: center;
-    }
-
-    .sale-products__table-mobile-num {
-        width: 40px;
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
-        color: var(--primary-default);
-        padding-left: 4px;
-    }
-
-    .sale-products__table-mobile-code {
-        margin-right: 14px;
-        width: 140px;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 20px;
-        color: var(--neutral-low);
-    }
-
-    .sale-products__table-mobile-price {
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 20px;
-        color: var(--neutral-low);
-    }
-
-    /* Estilização products pagination */
-
-    .sale-products__pagination {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-}
 
 /* Chart tabs */
 #Vendas {
